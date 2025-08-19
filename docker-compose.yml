@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin'
+      MYSQL_DATABASE: 'flask-crud'
+      MYSQL_ROOT_PASSWORD: 'admin'
+    ports:
+      - "3306:3306"
+    expose:
+      - '3306'
+    volumes:
+      - /Users/gustavoandrade/Documents/Projetos/sample-flask-auth/mysql/db_data:/var/lib/mysql
+
